@@ -112,6 +112,8 @@
 #agape-fair .af-hero{background-image:linear-gradient(180deg,rgba(255,255,255,.79),rgba(255,255,255,.58) 55%,rgba(255,255,255,.68)),url('assets/malaysia-students.jpg')}
 #agape-fair .af-hero h1,#agape-fair .af-hero-eyebrow,#agape-fair .af-hero-date{text-shadow:0 1px 10px #ffffffb3}
 @media(max-width:700px){#agape-fair .af-hero{background-image:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,255,255,.62) 55%,rgba(255,255,255,.72)),url('assets/malaysia-students.jpg')}}
+
+#agape-fair .af-mobile[hidden]{display:none!important}
 </style>
 
 <div id="agape-fair">
@@ -141,6 +143,27 @@ const root=document.getElementById('agape-fair');
 if(!root || root.dataset.afReady)return;
 root.dataset.afReady='true';
 const form=root.querySelector('form');
+
+// Avoid covering the registration section with its own mobile call to action.
+const mobileBar=root.querySelector('.af-mobile');
+const registrationSection=root.querySelector('.af-register-section');
+if(mobileBar && registrationSection){
+  const syncMobileBar=()=>{
+    const bounds=registrationSection.getBoundingClientRect();
+    mobileBar.hidden=bounds.top<window.innerHeight && bounds.bottom>0;
+  };
+  syncMobileBar();
+  if('IntersectionObserver' in window){
+    const registrationObserver=new window.IntersectionObserver(entries=>{
+      mobileBar.hidden=entries[0].isIntersecting;
+    },{threshold:0});
+    registrationObserver.observe(registrationSection);
+  }else{
+    window.addEventListener('scroll',syncMobileBar,{passive:true});
+    window.addEventListener('resize',syncMobileBar);
+  }
+}
+
 root.querySelectorAll('[data-af-city]').forEach(link=>link.addEventListener('click',function(){form.elements.city.value=this.dataset.afCity;}));
 form.addEventListener('submit',function(event){
 event.preventDefault();
