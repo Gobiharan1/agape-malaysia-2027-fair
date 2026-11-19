@@ -1,0 +1,80 @@
+AGAPE • STUDY IN MALAYSIA EDUCATION FAIR
+
+WHAT TO USE
+wordpress-paste.html: copy ALL its contents into one Elementor HTML widget.
+The campaign background, logo and three supplied photos are embedded, so no image upload is needed.
+index.html: open in a browser to preview the complete page with assets/ alongside it.
+wordpress-media-version.html: smaller production alternative using Media Library URLs.
+
+WORDPRESS SETUP (ELEMENTOR)
+1. Create a new WordPress page, e.g. Study in Malaysia Fair.
+2. Open it with Elementor. Set Page Layout to Elementor Canvas to remove your theme's header, footer and automatic page title.
+3. Add one full-width container. Set content width to Full Width, gap to 0, margin and padding to 0.
+4. Add an HTML widget. Open wordpress-paste.html in a text/code editor and copy all the code into that widget. Do not paste the file as an attachment or into a text/paragraph widget.
+5. Preview and test on a phone before publishing your ad destination.
+
+WITHOUT ELEMENTOR
+Use a Custom HTML block and your theme's blank, full-width template, disabling the page title, header and footer in the template settings. Exact controls depend on the theme. The snippet cannot remove theme output outside itself. WordPress must allow the embedded style, script and image data URLs. Some roles, multisite installations and security plugins filter these. If that occurs, use Media Library images and have an administrator add the script through the site's approved custom-code tool.
+
+SMALLER MEDIA LIBRARY VERSION (RECOMMENDED FOR PRODUCTION)
+Upload the image files from assets/ into WordPress Media Library. Copy each uploaded File URL, and replace these image paths in wordpress-media-version.html:
+  assets/agape-white.png
+  assets/malaysia-students.jpg
+  assets/nadhirah.jpg
+  assets/noor-athirah.jpg
+  assets/ck-wong.jpg
+  assets/uniten-logo.png
+  assets/mila-logo.png
+  assets/xiamen-logo.png
+Paste that version into the HTML widget instead. Keep every URL HTTPS. This permits browser caching and avoids data-URL filtering.
+
+HOW REGISTRATION WORKS
+The form validates name, phone, email, fair and intake, then opens WhatsApp with a prepared message to +60 16 354 2461, the WhatsApp number published on https://www.studywithagape.com/ at the time of preparation. Visitors review the message and tap Send. Agape confirms their place manually. This page does not save leads in WordPress, send email, reserve seats automatically, or install tracking pixels. No test message has been sent.
+To receive registrations in a WordPress database or email instead, replace the form with a configured form-plugin shortcode/widget and its consent/confirmation flow. A browser-only HTML snippet cannot securely provide that backend by itself.
+Do not count the submit-button click as a confirmed registration in ad reporting: visitors can leave before sending the WhatsApp message.
+
+CONTENT NOTES
+Dates follow your brief: Colombo, Radisson Colombo, Saturday 12 December 2026, 10 AM–3 PM; Kandy, Radisson Kandy, Sunday 13 December 2026, 9 AM–3 PM. The fair is for March and May 2027 intakes.
+The three names, titles and institutions follow your chat instructions. Portraits are unretouched and cropped using CSS.
+The scholarship wording follows the brief: “Guaranteed 50% scholarships (subject to availability).” MILA's one-semester accommodation offer is also labelled subject to availability. Verify the offers with the universities before running ads.
+Contact section shows only the website supplied in your document. The existing WhatsApp form destination remains +60 16 354 2461.
+The 40+ universities and 500+ programmes figures come from your supplied event brief, rather than a claim that every institution has a representative attending.
+No header, navigation menu or footer is included. The small contact strip is part of the landing-page content.
+
+FILES
+index.html — standalone preview
+wordpress-paste.html — self-contained copy/paste code
+wordpress-media-version.html — code for WordPress Media Library URLs
+assets/ — optimized portraits and Agape's public logo
+interaction.js — readable copy of the interaction code already included in each HTML file; do not add it twice
+
+DESIGN REVISION
+The current page follows the supplied January 2027 intake reference: the same public student-and-Kuala-Lumpur background, a large centered yellow headline, yellow call-to-action, red/pink section backgrounds, rounded white feature cards and a centered form. The site header and footer are omitted.
+Reference: https://www.studywithagape.com/january-2027-intake/
+
+CONTENT CORRECTION
+Marketing copy now uses only the supplied event document and the representative details from your chat. Added slogans, reference-page claims and externally sourced displayed contact details have been removed. Unfilled contact placeholders in the document are omitted. Only essential form instructions remain as interface guidance.
+
+LATEST DESIGN REFINEMENT
+Applied a cleaner photo hero, calmer introduction, simpler event and benefit cards, refined representative cards and a two-column desktop registration section. Mobile sections stack vertically. The yellow/red campaign colours and logo treatment are preserved. All HTML content and registration code were compared against the preceding supplied-content version and verified unchanged. Desktop (1280 px) and mobile (390 px) layouts were checked.
+
+CURRENT DESIGN
+Original split-cover design with a red hero, framed student image, yellow accents, dark event and registration panels, and editorial content sections. All previous page content, logo markup and registration logic remain unchanged. Desktop and mobile layouts were visually checked.
+
+ENCODING FIX
+The latest HTML files use ASCII-safe numeric character references for punctuation and SVG icons instead of font symbols. This prevents broken dashes and icons when a pasted snippet or standalone file is read with the wrong character encoding. Replace the entire old HTML widget content with the latest wordpress-paste.html contents.
+
+UNIVERSITY LOGOS
+Replaced the university-name text beneath each representative with the corresponding supplied logo in a white panel with a rose accent line. Nadhirah: Universiti Tenaga Nasional; Noor Athirah: MILA University; CK Wong: Xiamen University Malaysia. Logo colours and aspect ratios are preserved. Images are embedded in wordpress-paste.html; Media Library users should upload the three new logo files and replace their paths too.
+
+HOMEPAGE COLOUR MATCH
+Primary brand colours now match the current homepage Elementor styles: red #E61240, yellow #FFDD00, black #000000 and white #FFFFFF. The existing page structure, content, logo assets, university panels and registration code are unchanged. Colour values were verified in the rendered page.
+
+ROUNDED HOMEPAGE STYLE
+Buttons now use pill shapes, cards and photos have rounded corners, and form fields and university-logo panels have softer edges. Strong offset button/form shadows were replaced with soft shadows. Brand colours, content, structure and logos are unchanged. Headings use the homepage Poppins font when available in WordPress, with a sans-serif fallback.
+
+LATEST COLOUR UPDATE
+Removed yellow from all interface styling. Red is the only accent colour, with neutral white/light backgrounds and black text. The hero now has a light neutral background, red heading/button and the original coloured Agape logo. University logos and photographs retain their original colours. Content, rounded corners and structure are unchanged. Desktop and mobile rendering were checked.
+
+LATEST HERO AND CONTACT UPDATE
+Removed the separate hero photo panel and used the existing Malaysia/student image as the full hero background with a light overlay. Hero content is centred; bottom padding is exactly 150px on desktop and mobile. EDUCATION FAIR - KANDY & COLOMBO is a prominent subtitle. The 40+ UNIVERSITIES | 500+ COURSES | SCHOLARSHIP OPPORTUNITIES statement is highlighted on a stronger red panel. Bottom contact cards now link to tel:+60163542461, https://wa.me/60163542461 and mailto:info@studywithagape.com, plus the website.
