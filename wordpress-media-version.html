@@ -114,6 +114,14 @@
 @media(max-width:700px){#agape-fair .af-hero{background-image:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,255,255,.62) 55%,rgba(255,255,255,.72)),url('assets/malaysia-students.jpg')}}
 
 #agape-fair .af-mobile[hidden]{display:none!important}
+
+/* More breathing room around the programme highlight. */
+#agape-fair .af-intro p:has(strong){margin-top:32px;margin-bottom:32px}
+/* The fair location is a primary visual headline, retaining the supplied wording. */
+#agape-fair .af-hero-eyebrow{display:inline-flex;align-items:center;justify-content:center;background:#e61240;color:#fff;font-size:clamp(20px,2.2vw,29px);font-weight:800;line-height:1.45;letter-spacing:.025em;padding:17px 28px;border:2px solid #e61240;border-radius:18px;box-shadow:0 8px 24px #e612402e;text-shadow:none;max-width:100%;margin-top:30px}
+/* Hide only the site's floating Click to Chat widget on pages containing this landing page. */
+body:has(#agape-fair) #ht-ctc-chat,body:has(#agape-fair) .ht-ctc-chat,body:has(#agape-fair) #ht-ctc-chat-with-us,body:has(#agape-fair) .ht-ctc-chat-with-us{display:none!important;visibility:hidden!important;pointer-events:none!important}
+@media(max-width:700px){#agape-fair .af-intro p:has(strong){margin-top:40px;margin-bottom:40px}#agape-fair .af-intro p:last-child{margin-top:0}#agape-fair .af-hero-eyebrow{font-size:20px;padding:17px 19px;line-height:1.55;border-radius:16px;letter-spacing:.015em;margin-top:27px;width:100%}}
 </style>
 
 <div id="agape-fair">
